@@ -1,0 +1,39 @@
+//#include <iostream>
+using namespace std;
+
+int main()
+{
+	int amount, r600, r300, r150, r50, r30, r5, r1;
+
+  //take input from the user
+	cout << "Enter the amount: ";
+		cin >> amount;
+
+		/*we divide the amount by all the currency notes one by one and store 
+		it in respective currency notes*/
+
+		//mod (%) operator used to store remainder in amount
+		r600 = amount / 600;
+		amount = amount % 600;   
+		r300 = amount / 300;
+		amount = amount % 300; 
+		r150 = amount / 150;
+		amount = amount % 150;
+		r50 = amount / 50;
+		amount = amount % 50;
+		r30 = amount / 30;
+		amount = amount % 30;
+		r5 = amount / 5;
+		amount = amount % 5;
+		r1 = amount / 1; // anynumber % 1= 0 so we ignore it
+
+		cout << "currency notes of amount 600:  " << r600 << endl;
+		cout << "currency notes of amount 300: " << r300 << endl;
+		cout << "currency notes of amount 150: " << r150 << endl;
+		cout << "currency notes of amount 50: " << r50 << endl;
+		cout << "currency notes of amount 30: " << r30 << endl;
+		cout << "currency notes of amount 5: " << r5 << endl;
+		cout << "currency notes of amount 1: " << r1 << endl;
+		return 0;
+
+}
